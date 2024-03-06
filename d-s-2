@@ -1,0 +1,26 @@
+from gensim.summarization import summarize
+
+def text_summarization(text, ratio=0.2):
+    """
+    Function to perform text summarization using gensim's summarize function.
+    
+    Args:
+    text (str): The input text to be summarized.
+    ratio (float): The ratio of the original text to be included in the summary (default is 0.2).
+    
+    Returns:
+    str: The summarized text.
+    """
+    summarized_text = summarize(text, ratio=ratio)
+    return summarized_text
+
+# Sample data
+news_article = """
+Your science and technology news article here...
+"""
+
+# Call the summarization function
+summary = text_summarization(news_article)
+
+# Print the summarized text
+print(summary)
